@@ -1,0 +1,10 @@
+env/
+env2/
+.env
+**/files/
+**/.cache*/
+config/
+.streamlit/
+.idea/
+.vscode/
+.history/

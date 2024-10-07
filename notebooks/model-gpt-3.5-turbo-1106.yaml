@@ -1,0 +1,10 @@
+_type: openai-chat
+frequency_penalty: 0
+logit_bias: {}
+max_tokens: 450
+model_name: gpt-3.5-turbo-1106
+n: 1
+presence_penalty: 0
+request_timeout: null
+temperature: 0.1
+top_p: 1
