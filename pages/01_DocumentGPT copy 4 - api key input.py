@@ -14,9 +14,18 @@ st.set_page_config(
     page_icon="📃",
 )
 
+
+with st.sidebar:
+    api_key = st.text_input("Enter your OpenAI API key", type="password")
+    file = st.file_uploader(
+        "Upload a .txt .pdf or .docx file",
+        type=["pdf", "txt", "docx"],
+    )
+
 llm = ChatOpenAI(
     temperature=0.1,
-    model_name="gpt-4o-mini"
+    model_name="gpt-4o-mini",
+    api_key=api_key,
 )
 
 
@@ -92,13 +101,7 @@ Upload your files on the sidebar.
 """
 )
 
-with st.sidebar:
-    file = st.file_uploader(
-        "Upload a .txt .pdf or .docx file",
-        type=["pdf", "txt", "docx"],
-    )
-
-if file:
+if file and api_key:
     retriever = embed_file(file)
     send_message("I'm ready! Ask away!", "ai", save=False)
     paint_history()

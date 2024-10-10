@@ -1,5 +1,6 @@
 env/
 env2/
+env2-2/
 .env
 **/files/
 **/.cache*/
@@ -8,3 +9,5 @@ config/
 .idea/
 .vscode/
 .history/
+__pycache__/
+recipes.csv
